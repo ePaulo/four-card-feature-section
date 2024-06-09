@@ -37,8 +37,9 @@ div.container {
   padding: 0 3.2rem;
 
   header {
-    width: 311px;
-    margin-bottom: 6rem;
+    min-width: 311px;
+    max-width: 540px;
+    margin: 0 auto 6rem;
 
     h1 {
       font-size: 2.4rem;
