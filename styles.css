@@ -31,9 +31,9 @@ body {
 }
 
 div.container {
-  max-width: 1440px;
-  min-width: 375px;
-  margin: 8.5rem auto 4rem;
+  max-width: 1070px;
+  min-width: 385px;
+  margin: 8rem auto 4rem;
   padding: 0 3.2rem;
 
   header {
@@ -44,6 +44,7 @@ div.container {
     h1 {
       font-size: 2.4rem;
       text-align: center;
+      line-height: 1.35;
 
       span.line-1 {
         font-weight: 200;
@@ -65,16 +66,16 @@ div.container {
 
   main.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 0;
 
     section.card {
       position: relative;
       width: 311px;
       height: 222px;
-      margin-bottom: 0.5em;
-      padding: 2.9rem;
+      margin: 0 auto 0.5em;
+      padding: 2.3rem;
       border-radius: 6px;
       border-top-width: 4px;
       border-top-style: solid;
@@ -98,8 +99,8 @@ div.container {
         height: 57px;
         align-self: flex-end;
         position: absolute;
-        bottom: 2.5rem;
-        right: 2.9rem;
+        bottom: 2.3rem;
+        right: 2.3rem;
       }
     }
 
@@ -117,6 +118,33 @@ div.container {
 
     section#card-4 {
       border-top-color: var(--color-primary-blue);
+    }
+  }
+}
+
+@media (min-width: 1065px) {
+  main.cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    section#card-1 {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
+
+    section#card-2 {
+      grid-column: 2;
+    }
+
+    section#card-3 {
+      grid-column: 2;
+    }
+
+    section#card-4 {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      align-self: center;
     }
   }
 }
