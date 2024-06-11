@@ -31,20 +31,18 @@ body {
 }
 
 div.container {
-  max-width: 1070px;
-  min-width: 385px;
-  margin: 8rem auto 4rem;
+  /* min-width: 385px; */
+  margin: 7rem auto 4rem;
   padding: 0 3.2rem;
 
   header {
-    min-width: 311px;
-    max-width: 540px;
+    width: 311px;
     margin: 0 auto 6rem;
 
     h1 {
       font-size: 2.4rem;
       text-align: center;
-      line-height: 1.35;
+      line-height: 1.5;
 
       span.line-1 {
         font-weight: 200;
@@ -99,8 +97,8 @@ div.container {
         height: 57px;
         align-self: flex-end;
         position: absolute;
-        bottom: 2.3rem;
-        right: 2.3rem;
+        bottom: 2.8rem;
+        right: 2.8rem;
       }
     }
 
@@ -122,35 +120,68 @@ div.container {
   }
 }
 
-@media (min-width: 1065px) {
-  main.cards {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+@media (min-width: 830px) {
+  div.container {
+    max-width: 930px;
 
-    section#card-1 {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      align-self: center;
+    header {
+      width: 540px;
+
+      h1 {
+        font-size: 3.6rem;
+        line-height: 1.4;
+      }
     }
 
-    section#card-2 {
-      grid-column: 2;
-    }
+    main.cards {
+      section.card {
+        width: 350px;
+        height: 250px;
 
-    section#card-3 {
-      grid-column: 2;
+        img {
+          width: 64px;
+          height: 64px;
+          bottom: 3.2rem;
+          right: 3.2rem;
+        }
+      }
     }
+  }
+}
 
-    section#card-4 {
-      grid-column: 3;
-      grid-row: 1 / span 2;
-      align-self: center;
+@media (min-width: 1200px) {
+  div.container {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    main.cards {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      section#card-1 {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+      }
+
+      section#card-2 {
+        grid-column: 2;
+      }
+
+      section#card-3 {
+        grid-column: 2;
+      }
+
+      section#card-4 {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        align-self: center;
+      }
     }
   }
 }
 
 footer {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 
   p.attribution {
     font-size: 11px;
